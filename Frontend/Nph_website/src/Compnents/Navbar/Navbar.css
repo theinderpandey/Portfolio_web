@@ -1,0 +1,42 @@
+.custom-navbar {
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  transition: background-color 0.3s ease;
+}
+
+.custom-navbar .nav-link {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ff4d4d; /* hover effect in red */
+}
+
+.custom-navbar .navbar-brand {
+  color: #ff1a1a;
+  font-size: 1.5rem;
+}
+
+.custom-navbar .btn-danger {
+  background-color: #c40000;
+  border-color: #c40000;
+  box-shadow: 0 0 15px rgba(196, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.custom-navbar .btn-danger:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+.navbar-logo {
+  border-radius: 50%; /* Makes the logo circular */
+  object-fit: cover; /* Ensures proper image scaling */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+

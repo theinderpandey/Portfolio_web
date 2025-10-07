@@ -1,0 +1,163 @@
+/* Import Antonio font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&display=swap');
+
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  min-height: 100vh; /* Full viewport height */
+  /* Dark gradient overlay + background image */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.6),  /* Top dark overlay */
+      rgba(0, 0, 0, 0.6)   /* Bottom dark overlay */
+    ),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1920&q=80")
+      center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+  font-family: 'Antonio', sans-serif;
+}
+
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.988);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+  z-index: 2;
+}
+
+/* Typing cursor animation */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #c40000;
+  width: fit-content;
+  margin: 0 auto;
+  animation: blink 0.8s infinite;
+}
+
+/* Cursor blink */
+@keyframes blink {
+  0%, 100% {
+    border-color: #c40000;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Red glow for company name */
+.glow-text {
+  color: #ff1a1a;
+  animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+
+/* Subtitle animation */
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #e0e0e0;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  animation-delay: 2.8s;
+}
+
+/* Button container */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 3.5s;
+}
+
+/* General button styling */
+.hero-btn {
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* Red Primary Button */
+.primary-btn {
+  background-color: #c40000;
+  color: white;
+  box-shadow: 0 0 15px rgba(196, 0, 0, 0.5);
+}
+
+.primary-btn:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+}
+
+/* Outline Red Button */
+.secondary-btn {
+  border: 2px solid #c40000;
+  color: #c40000;
+  background: transparent;
+}
+
+.secondary-btn:hover {
+  background: #c40000;
+  color: white;
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-title { font-size: 2.8rem; }
+  .hero-subtitle { font-size: 1.2rem; }
+}
+
+@media (max-width: 992px) {
+  .hero-title { font-size: 2.5rem; }
+  .hero-subtitle { font-size: 1.1rem; }
+}
+
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1rem; }
+}
+
+@media (max-width: 576px) {
+  .hero-title { font-size: 1.8rem; }
+  .hero-subtitle { font-size: 0.95rem; }
+  .hero-buttons { gap: 10px; flex-direction: column; }
+  .hero-btn { min-width: 120px; padding: 10px 20px; }
+}
