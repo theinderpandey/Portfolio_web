@@ -1,0 +1,41 @@
+/* Main Section */
+.main-section {
+  font-family: 'Antonio', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Section Titles with Neon Glow */
+.section-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ff0808;
+}
+
+/* Service Cards with Neon Border + Glow */
+.service-card {
+  background-color: rgba(255, 0, 0, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 1rem;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+}
+
+/* Glow effect on hover */
+.service-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.4);
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* Neon heading inside card */
+.service-card h4 {
+  color: #f80000;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* On hover — make heading glow brighter and turn black if desired */
+.service-card:hover h4 {
+  color: #e60202;
+}
